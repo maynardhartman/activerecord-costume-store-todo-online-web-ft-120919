@@ -1,7 +1,7 @@
 # Create your haunted_houses migration here[5.2]
 class CreateHauntedHouses < ActiveRecord::Migration[5.2]
     def change(*args)
-    create_table :haunted_houses do |t|
+    create_table :haunted_houses, IF NOT EXISTSE do |t|
       t.string       :name 
       t.string       :location
       t.string       :theme
