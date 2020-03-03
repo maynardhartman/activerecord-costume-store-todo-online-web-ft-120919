@@ -6,7 +6,7 @@ class CreateCostumeStores < ActiveRecord::Migration[5.2]
   end
   
   def change(*args)
-    create_table :costume_stores do |t|
+    create_table :costume_stores, IF NOT EXISTS do |t|
       t.string      :name
       t.string      :location
       t.integer     :costume_inventory
