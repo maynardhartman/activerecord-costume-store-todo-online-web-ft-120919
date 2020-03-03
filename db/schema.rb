@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 3) do
+ActiveRecord::Schema.define(version: 2) do
 
   create_table "costumes", force: :cascade do |t|
     t.string "name"
@@ -32,19 +32,6 @@ ActiveRecord::Schema.define(version: 3) do
     t.time "closing_time"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "haunted_houses", force: :cascade do |t|
-    t.string "name"
-    t.string "location"
-    t.string "theme"
-    t.decimal "price"
-    t.boolean "family_friend"
-    t.datetime "opening_date"
-    t.datetime "closing_date"
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end
