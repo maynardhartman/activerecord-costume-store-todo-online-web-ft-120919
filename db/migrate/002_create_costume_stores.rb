@@ -1,7 +1,8 @@
 # Create your costume_stores migration here
 class CreateCostumeStores < ActiveRecord::Migration[5.2]
   def up 
-    reset 
+    drop_table :costumestores do |t|
+    end
   end
   
   def change(*args)
