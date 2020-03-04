@@ -2,12 +2,13 @@
 class CreateCostumeStores < ActiveRecord::Migration[5.2]
   def up 
     drop_table :costumestores do |t|
-      binding.pry
+     
     end
   end
   
   def change(*args)
     create_table :costume_stores, IF NOT EXISTS do |t|
+      binding.pry
       t.string      :name
       t.string      :location
       t.integer     :costume_inventory
