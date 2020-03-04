@@ -2,6 +2,7 @@
 class CreateCostumeStores < ActiveRecord::Migration[5.2]
   def up 
     drop_table :costumestores do |t|
+      binding.pry
     end
   end
   
